@@ -27,6 +27,10 @@ jobs:
 
       - name: Run tests
         run: npx playwright test
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
 
       - name: Upload Report
         uses: actions/upload-artifact@v4
