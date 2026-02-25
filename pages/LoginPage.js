@@ -1,3 +1,4 @@
+import { env } from '../utils/env.js';
 export class LoginPage {
   constructor(page) {
     this.page = page;
@@ -7,8 +8,8 @@ export class LoginPage {
   }
 
   async goto() {
-    await this.page.goto('https://www.saucedemo.com/');
-  }
+    await this.page.goto(env.baseUrl);
+    }
 
   async login(user, pass) {
     await this.page.fill(this.username, user);
