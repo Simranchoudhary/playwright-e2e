@@ -7,13 +7,16 @@ export default defineConfig({
   globalSetup: './global-setup.js',
   workers: 2,
   retries: 1,
-  reporter: [['html', { open: 'never' }]],
+  reporter: [
+    ['html', { open: 'never' }],
+    ['allure-playwright']
+  ],
 
   use: {
     baseURL: process.env.BASE_URL,
-    storageState: 'storageState.json',
+    storageState: 'storageState.json', // Reuse stored authentication session across tests
     headless: true,
-    screenshot: 'only-on-failure',
+    screenshot: 'only-on-failure', // Capture artifacts for debugging failures
     video: 'retain-on-failure',
     trace: 'on-first-retry',
   },

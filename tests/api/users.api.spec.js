@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+// Validates basic API contract: status code and response structure.
 
 test('@api GET users API', async ({ request }) => {
   const response = await request.get(

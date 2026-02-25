@@ -1,3 +1,7 @@
+// Global setup runs once before all tests.
+// It performs login and saves authenticated session (storageState)
+// so tests do not need to login repeatedly, improving execution speed.
+
 import dotenv from 'dotenv';
 dotenv.config();
 

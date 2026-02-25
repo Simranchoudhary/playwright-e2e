@@ -1,3 +1,5 @@
+// Adds product to cart by visible product name.
+// Locator finds product container dynamically to avoid brittle selectors.
 export class InventoryPage {
   constructor(page) {
     this.page = page;

@@ -3,20 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
-  "test": "npx playwright test",
-  "smoke": "npx playwright test --grep @smoke",
-  "regression": "npx playwright test --grep @regression",
-  "api": "npx playwright test --grep @api",
-  "report": "npx playwright show-report"
-},
-
+  "scripts": {
+    "test": "npx playwright test",
+    "smoke": "npx playwright test --grep @smoke",
+    "regression": "npx playwright test --grep @regression",
+    "api": "npx playwright test --grep @api",
+    "report": "npx playwright show-report",
+    "allure": "allure serve allure-results"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.58.2"
+    "@playwright/test": "^1.58.2",
+    "allure-playwright": "^3.5.0"
   },
   "dependencies": {
     "dotenv": "^17.3.1"

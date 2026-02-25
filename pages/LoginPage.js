@@ -1,4 +1,6 @@
 import { env } from '../utils/env.js';
+// Page Object for Login functionality.
+// Encapsulates selectors and login actions to keep tests clean and reusable.
 export class LoginPage {
   constructor(page) {
     this.page = page;
