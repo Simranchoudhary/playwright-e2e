@@ -39,6 +39,15 @@ jobs:
         if: always()
         run: npm install -g allure-commandline
 
+      - name: Load previous Allure history
+        if: always()
+        run: |
+          git clone --depth 1 --branch gh-pages https://github.com/${{ github.repository }} gh-pages || echo "No previous report"
+          if [ -d "gh-pages/history" ]; then
+            mkdir -p allure-results/history
+            cp -r gh-pages/history/* allure-results/history/ || true
+          fi
+
       - name: Generate Allure Report
         if: always()
         run: |
