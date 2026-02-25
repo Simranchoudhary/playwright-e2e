@@ -1,7 +1,9 @@
 ![CI](https://github.com/Simranchoudhary/playwright-e2e/actions/workflows/playwright.yml/badge.svg)
+[![Allure Report](https://img.shields.io/badge/Allure-Report-blue)](https://simranchoudhary.github.io/playwright-e2e/)
 ![Playwright](https://img.shields.io/badge/Playwright-JS-green)
 ![Node](https://img.shields.io/badge/Node-%3E%3D18-blue)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
+
 # Playwright E2E Automation Framework
 
 ## Overview
